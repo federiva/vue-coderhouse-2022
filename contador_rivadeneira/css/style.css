@@ -1,0 +1,11 @@
+body {
+  padding: 1rem;
+}
+
+.btn-round {
+  border-radius: 50%;
+}
+
+.contador {
+  font-size: 2rem;
+}
