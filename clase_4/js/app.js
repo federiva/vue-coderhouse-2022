@@ -7,16 +7,7 @@ const app = new Vue({
     tableData: tableDefinitions,
   },
   methods: {
-    incrementar: function() {
-      this.contador = this.contador + 1
-      this.claseOperacion = "bi bi-arrow-up"
-    },
-    decrementar: function() {
-      this.contador = this.contador - 1
-      this.claseOperacion = "bi bi-arrow-down"
-    }
   },
   computed: {
-
   }
 })
