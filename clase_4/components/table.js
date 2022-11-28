@@ -5,8 +5,8 @@ Vue.component('table-component', {
     params: Object,
   },
   methods: {
-    getTitle: function() {
-      return 'PONI'
+    getTableClass: function() {
+      return `table ${this.getClass("table")}`
     },
     getTableHeaders: function() {
       const headers = new Set();
@@ -47,7 +47,7 @@ Vue.component('table-component', {
     <div class="table-wrapper">
       <h3 class="table-header">{{title}}</h3>
       <hr>
-      <table :class="getTableClass">
+      <table :class="getTableClass()">
         <thead>
           <tr>
             <th scope="col" v-for="(header,index) of getTableHeaders()" :key="index">{{header}}</th>
@@ -72,8 +72,5 @@ Vue.component('table-component', {
     }
   },
   computed: {
-    getTableClass: function() {
-      return `table ${this.getClass("table")}`
-    },
   }
 })
