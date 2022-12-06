@@ -1,0 +1,33 @@
+body {
+    background: #eefff8;
+}
+
+.table-wrapper {
+  padding: 1rem;
+}
+
+.custom-img img {
+  height: 100px;
+  width: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-img img:hover {
+  transform: scale(200%);
+}
+
+.text-principles {
+  font-weight: 500;
+  font-style: italic;
+  color: greenyellow !important;
+}
+
+.table-byn thead {
+  background: rgba(50,50,50,0.8);
+  color: #ffffff;
+}
+
+.table-byn tr:nth-child(even) {
+  background: rgba(50,50,50,0.8);
+  color: #ffffff;
+};
