@@ -1,5 +1,7 @@
 <template>
   <div>
+    <ingresar-login></ingresar-login>
+    <registrar-usuario></registrar-usuario>
     <carro-productos v-bind:data="data"></carro-productos>
     <div class="row p-4">
         <div class="col-2" v-for="producto of data" :key="producto.id">
@@ -22,6 +24,8 @@
 
 <script>
 import CarroProductos from './CarroComponent.vue';
+import IngresarLogin from './LoginComponent.vue';
+import RegistrarUsuario from './RegistrarComponent.vue';
 
 export default {
   name: 'listado-productos',
@@ -51,7 +55,9 @@ export default {
     }
   },
   components: {
-    CarroProductos
+    CarroProductos,
+    IngresarLogin,
+    RegistrarUsuario,
   },
   filters: {
     formatearPrecio: (precio) => {
