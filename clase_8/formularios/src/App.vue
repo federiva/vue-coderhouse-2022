@@ -1,9 +1,12 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <div class="container-fluid">
+        <img class="logo" alt="Vue logo" src="../public/coderhouse.jpeg">
+        <div class="container-fluid mt-4">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-12">
+                    <h4>Realice un nuevo pedido</h4>
+                </div>
+                <div class="col-sm-12">
                     <formulario-input></formulario-input>
                 </div>
             </div>
@@ -30,5 +33,9 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+
+.logo {
+    height: 60px;
 }
 </style>
