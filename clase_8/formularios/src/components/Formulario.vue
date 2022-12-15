@@ -9,7 +9,7 @@
                             required>
                         <field-messages name="nombre">
                             <div><i class="bi bi-check-lg"></i></div>
-                            <div slot="required">Nombre es un campo requerido</div>
+                            <div class="small text-danger" slot="required">Nombre es un campo requerido</div>
                         </field-messages>
                     </validate>
                 </div>
@@ -22,7 +22,7 @@
                             required>
                         <field-messages name="email">
                             <div><i class="bi bi-check-lg"></i></div>
-                            <div slot="required">El e-mail es un campo requerido</div>
+                            <div class="small text-danger" slot="required">El e-mail es un campo requerido</div>
                             <div slot="email">El e-mail no tiene un formato válido</div>
                         </field-messages>
                     </validate>
@@ -85,7 +85,7 @@ export default {
             datos: {
                 nombre: null,
                 email: null,
-                tipo: null,
+                tipo: "Delivery",
                 comida: "Seleccione una comida",
             },
             formstate: {},
@@ -95,7 +95,6 @@ export default {
     methods: {
         onSubmit: function () {
             if (this.formstate.$invalid || !this.validInputs()) {
-                // alert user and exit early
                 alert("Hay errores en el pedido, revisalos y volve a probar.")
                 return;
             }
@@ -119,19 +118,9 @@ export default {
             this.datos.comida = null;
         },  
     },
-    computed: {
-        nombre() {
-            console.log(this.nombre)
-            return ""
-        },
-    },
     components: {
         TablaPedidos,
     }
 }
 </script>
-  
-<style scoped>
-
-</style>
   
